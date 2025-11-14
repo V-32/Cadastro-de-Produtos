@@ -1,0 +1,99 @@
+/* 🌙 CSS Moderno com Dark Mode */
+
+:root {
+    /* Definição de Cores Escuras */
+    --color-bg-primary: #1e1e2f; /* Fundo principal escuro */
+    --color-bg-secondary: #27293d; /* Fundo de containers/cards */
+    --color-text-primary: #f0f0f0; /* Texto claro principal */
+    --color-text-secondary: #b0b0d0; /* Texto secundário ou de apoio */
+    --color-accent: #8a2be2; /* Cor de destaque (roxo moderno) */
+    --color-accent-hover: #9b48f5; /* Cor de destaque ao passar o mouse */
+    --color-danger: #e94e77; /* Cor para ações de perigo/exclusão */
+    --color-danger-hover: #ff6a8f;
+    --color-border: #3c3c5c; /* Borda sutil */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    margin: 0;
+    padding: 20px;
+    transition: background 0.3s; /* Transição suave para mudanças de cor */
+}
+
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: var(--color-bg-secondary);
+    padding: 30px; /* Mais preenchimento para um visual mais aberto */
+    border-radius: 12px; /* Cantos mais arredondados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra suave e escura */
+}
+
+.form input {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px; /* Cantos arredondados */
+    background: var(--color-bg-primary); /* Fundo do input levemente mais escuro */
+    color: var(--color-text-primary);
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que padding e border não aumentem o width */
+}
+
+.form input:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.5); /* Efeito de foco moderno */
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-accent);
+    color: var(--color-text-primary);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s; /* Transições para interatividade */
+    font-size: 16px;
+}
+
+button:hover {
+    background: var(--color-accent-hover);
+    transform: translateY(-1px); /* Pequeno efeito de elevação */
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    background: var(--color-bg-primary); /* Fundo da lista é a cor primária */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Alinha itens verticalmente */
+    border-left: 5px solid var(--color-accent); /* Linha de destaque na lateral */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+li button {
+    /* Estilo específico para o botão de exclusão/ação dentro do li */
+    width: auto;
+    padding: 8px 15px;
+    background: var(--color-danger);
+    font-size: 14px;
+}
+
+li button:hover {
+    background: var(--color-danger-hover);
+    transform: none; /* Remove o efeito de elevação do botão geral */
+}
